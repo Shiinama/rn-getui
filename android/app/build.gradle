@@ -1,6 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
-
+apply plugin: 'com.huawei.agconnect'
 import com.android.build.OutputFile
 
 /**
@@ -100,6 +100,25 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        // 配置个推的三个参数
+        manifestPlaceholders = [
+            GETUI_APPID : "tGwiVOvP4T7ntwiKHl2eQ",
+           
+            MEIZU_APP_ID    : "",
+            MEIZU_APP_KEY   : "",
+
+            HUAWEI_APP_ID   : "",
+
+            XIAOMI_APP_ID   : "",
+            XIAOMI_APP_KEY  : "",
+
+            VIVO_APP_ID   : "",
+            VIVO_APP_KEY  : "",
+
+            OPPO_APP_KEY    : "",
+            OPPO_APP_SECRET : ""
+        ]
+
     }
 
     splits {
@@ -150,10 +169,10 @@ android {
 
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
+    implementation project(':react-native-getui')
     implementation("com.facebook.react:react-android")
-
+    implementation("com.huawei.hms:push:6.9.0.300")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.0.0")
-
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.squareup.okhttp3', module:'okhttp'
