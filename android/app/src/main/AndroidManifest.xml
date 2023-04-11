@@ -21,8 +21,8 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
-      <meta-data android:name="PUSH_APPID" android:value="tGwiVOvP4T7ntwiKHl2eQ" />
-      <meta-data android:name="PUSH_APPKEY" android:value="N1hkKjx8Fk8I3dOH7Vy1Y2" />
-      <meta-data android:name="PUSH_APPSECRET" android:value="CtQHnZM3UQ9ClxaWTbfej1" />
+      <meta-data android:name="PUSH_APPID" android:value="THlKAXqZwA8l79tz1lK9A5"/>
+      <meta-data android:name="PUSH_APPKEY" android:value="V74xmxgf0d8Xkg3IkHTIx1"/>
+      <meta-data android:name="PUSH_APPSECRET" android:value="LWHJFUJsWe5QpAgF9nsg48"/>
     </application>
 </manifest>

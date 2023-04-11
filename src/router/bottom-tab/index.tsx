@@ -35,7 +35,7 @@ const BottomTab: React.FC = () => {
         name="HOME_HOME"
         component={Home}
         options={{
-          title: '工作台',
+          title: '文档站',
           tabBarIcon: ({ focused }) => imgRender('home', focused),
           headerShown: false,
         }}
