@@ -55,6 +55,7 @@ const styles = EStyleSheet.create({
 })
 function Section({ children, title }: SectionProps): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark'
+
   return (
     <View style={styles.sectionContainer}>
       <Text
@@ -83,6 +84,7 @@ function Section({ children, title }: SectionProps): JSX.Element {
 
 const Getuic = () => {
   const store = geTuiStore()
+
   const handleTurnOn = () => {
     Getui.turnOnPush()
   }
