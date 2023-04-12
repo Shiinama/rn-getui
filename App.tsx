@@ -15,12 +15,26 @@ import { NativeModules, NativeAppEventEmitter, NativeEventEmitter } from 'react-
 const { GetuiBridgeTools } = NativeModules
 
 function App(): JSX.Element {
+  // "GeTuiSdkDidRegisterClient",
+  // "GeTuiSDkDidNotifySdkState",
+  // "GeTuiSdkDidOccurError",
+  // "GetuiSdkGrantAuthorization",
+  // "GeTuiSdkwillPresentNotification",
+  // "GeTuiSdkDidReceiveNotification",
+  // "GeTuiSdkDidReceiveSlience",
+  // "GeTuiSdkOpenSettingsForNotification",
+  // "GeTuiSdkDidSendMessage",
+  // "GeTuiSdkDidSetPushMode",
+  // "GeTuiSdkDidAlias",
+  // "GeTuiSdkDidSetTags",
+  // "GetuiSdkDidQueryTag",
+  // "voipPushPayload"
   const myEmitter = new NativeEventEmitter(GetuiBridgeTools)
-  NativeAppEventEmitter.addListener('GeTuiSdkDidRegisterClient', res => {
+  NativeAppEventEmitter.addListener('GeTuiSdkDidReceiveNotification', res => {
     console.log(res, 1111)
   })
-  myEmitter.addListener('GeTuiSdkDidRegisterClient', res => {
-    console.log(res, 1111)
+  myEmitter.addListener('GeTuiSdkDidReceiveSlience', res => {
+    console.log(res, 222)
   })
   return (
     <SafeAreaProvider>

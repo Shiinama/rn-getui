@@ -38,7 +38,7 @@ const styles = EStyleSheet.create({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
-    height: 100,
+    height: 150,
   },
   sectionTitle: {
     fontSize: 24,
